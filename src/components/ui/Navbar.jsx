@@ -5,7 +5,7 @@ import MenuIcon from "./MenuIcon";
 
 export default function Navbar() {
   return (
-    <header className="sticky top-0 z-50 bg-dark">
+    <header className=" bg-dark">
       <nav className="container flex items-center justify-between p-4 mx-auto">
         <div className="flex gap-4">
           <TwitterIcon
@@ -16,6 +16,7 @@ export default function Navbar() {
           <LinkedinIcon
             height={30}
             width={30}
+            s
             classname="transition-all duration-300 cursor-pointer hover:scale-125"
           />
         </div>
