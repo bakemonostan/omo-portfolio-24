@@ -11,13 +11,13 @@ export default function Navbar() {
           <TwitterIcon
             height={30}
             width={30}
-            classname="transition-all duration-300 cursor-pointer hover:scale-125"
+            classname="duration-300 cursor-pointer hover:scale-125"
           />
           <LinkedinIcon
             height={30}
             width={30}
             s
-            classname="transition-all duration-300 cursor-pointer hover:scale-125"
+            classname="duration-300 cursor-pointer hover:scale-125"
           />
         </div>
         <Logo />
