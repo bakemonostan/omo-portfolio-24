@@ -8,8 +8,16 @@ export default function Navbar() {
     <header className="sticky top-0 z-50 bg-dark">
       <nav className="container flex items-center justify-between p-4 mx-auto">
         <div className="flex gap-4">
-          <TwitterIcon height={28} width={28} />
-          <LinkedinIcon height={28} width={28} />
+          <TwitterIcon
+            height={30}
+            width={30}
+            classname="transition-all duration-300 cursor-pointer hover:scale-125"
+          />
+          <LinkedinIcon
+            height={30}
+            width={30}
+            classname="transition-all duration-300 cursor-pointer hover:scale-125"
+          />
         </div>
         <Logo />
         <MenuIcon />

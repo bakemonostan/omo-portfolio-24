@@ -1,4 +1,4 @@
-export default function TwitterIcon({ width, height }) {
+export default function TwitterIcon({ width, height, classname }) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -6,6 +6,7 @@ export default function TwitterIcon({ width, height }) {
       viewBox="0,0,256,256"
       width={width}
       height={height}
+      className={classname}
     >
       <g
         fill="#ffffff"
