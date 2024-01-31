@@ -12,6 +12,10 @@ module.exports = {
         primary: "#FFC94B",
         secondary: "#070F0F",
       },
+      fontFamily: {
+        openSans: ["Open Sans", "sans-serif"],
+        playfair: ["Playfair Display", "serif"],
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
