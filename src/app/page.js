@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <main>
       <Hero />
-      {/* <OurDNA /> */}
+      <OurDNA />
       {/* <Works /> */}
       {/* <Whyus /> */}
       {/* <Blogs /> */}
