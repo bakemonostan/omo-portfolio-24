@@ -12,6 +12,15 @@ module.exports = {
         primary: "#FFC94B",
         secondary: "#070F0F",
       },
+      // breakpoints
+      screens: {
+        sm: "640px",
+        md: "768px",
+        lg: "1024px",
+        xl: "1280px",
+        "2xl": "1536px",
+        "3xl": "1640px",
+      },
       fontFamily: {
         openSans: ["Open Sans", "sans-serif"],
         playfair: ["Playfair Display", "serif"],
