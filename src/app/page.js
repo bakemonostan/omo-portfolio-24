@@ -10,8 +10,8 @@ export default function Home() {
       <Hero />
       <OurDNA />
       <Works />
-      {/* <Whyus /> */}
-      {/* <Blogs /> */}
+      <Whyus />
+      <Blogs />
     </main>
   );
 }

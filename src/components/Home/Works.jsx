@@ -15,7 +15,7 @@ export default function Works() {
           Amet eu facilisi posuere ut at cras non ipsum proin nunc purus tellus ultricies velit elementum ut dui sed augue ultrices phasellus ullamcorper condimentum ut suspendisse viverra ornare sit venenatis
         </p>
 
-        <div className="flex items-center justify-center pt-8 ">
+        <div className="flex justify-center pt-8 ">
           {/* grid container */}
           <div className="grid w-3/5 h-full grid-cols-7 grid-rows-6 ">
             <div className="flex items-center justify-center col-span-2 row-span-2 text-gray-400 text-9xl ">01</div>
@@ -31,9 +31,9 @@ export default function Works() {
               </Button>
             </div>
           </div>
-          <div className="w-2/5 ">
-            <h2>Louis Vuitton</h2>
-            <p>Amet eu facilisi posuere ut at cras non ipsum proin nunc purus tellus ultricies velit elementum ut dui sed augue ultrices phasellus ullamcorper condimentum ut suspendisse viverra ornare sit venenatis</p>
+          <div className="w-2/5 pt-32 space-y-10 ">
+            <h2 className="text-6xl text-center font-playfair">Louis Vuitton</h2>
+            <p className="px-12 text-left">Amet eu facilisi posuere ut at cras non ipsum proin nunc purus tellus ultricies velit elementum ut dui sed augue ultrices phasellus ullamcorper condimentum ut suspendisse viverra ornare sit venenatis</p>
           </div>
         </div>
       </div>
