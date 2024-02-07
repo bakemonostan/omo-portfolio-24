@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function OurDNA() {
   return (
-    <section className="h-screen xl:container 3xl:mx-auto">
+    <section className=" xl:container 3xl:mx-auto xl:pb-24">
       <div className="relative w-full 3xl:w-[calc(100%-8%)] min-h-[656px] xl:flex items-center  bg-secondary">
         {/* image */}
         <div className="w-full h-[39rem] xl:w-[35rem]  relative translate-y-24">

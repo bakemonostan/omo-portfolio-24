@@ -9,7 +9,7 @@ export default function Home() {
     <main>
       <Hero />
       <OurDNA />
-      {/* <Works /> */}
+      <Works />
       {/* <Whyus /> */}
       {/* <Blogs /> */}
     </main>
