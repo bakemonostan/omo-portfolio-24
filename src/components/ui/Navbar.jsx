@@ -16,7 +16,7 @@ export default function Navbar() {
           <LinkedinIcon
             height={30}
             width={30}
-            s
+            
             classname="duration-300 cursor-pointer hover:scale-125"
           />
         </div>

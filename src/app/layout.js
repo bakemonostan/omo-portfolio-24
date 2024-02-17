@@ -1,6 +1,7 @@
 import { Open_Sans, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/ui/Navbar";
+import Footer from "@/components/ui/Footer";
 
 const playfair = Playfair_Display({ subsets: ["latin"] });
 const openSans = Open_Sans({ subsets: ["latin"] });
@@ -16,6 +17,7 @@ export default function RootLayout({ children }) {
       <body className={`${playfair.className} ${openSans.className}`}>
         <Navbar />
         {children}
+        {/* <Footer /> */}
       </body>
     </html>
   );
