@@ -11,9 +11,9 @@ export default function Home() {
       <Hero />
       <OurDNA />
       <Works />
-      {/* <Whyus /> */}
-      {/* <Blogs /> */}
-      {/* <OurClients /> */}
+      <Whyus />
+      <Blogs />
+      <OurClients />
     </main>
   );
 }

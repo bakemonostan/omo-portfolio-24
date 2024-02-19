@@ -17,7 +17,7 @@ export default function RootLayout({ children }) {
       <body className={`${playfair.className} ${openSans.className}`}>
         <Navbar />
         {children}
-        {/* <Footer /> */}
+        <Footer />
       </body>
     </html>
   );
