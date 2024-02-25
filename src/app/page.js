@@ -5,6 +5,8 @@ import OurDNA from "@/components/Home/OurDNA";
 import Whyus from "@/components/Home/Whyus";
 import Works from "@/components/Home/Works";
 
+export const revalidate = 20;
+
 export default function Home() {
   return (
     <main>

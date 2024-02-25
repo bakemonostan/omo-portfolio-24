@@ -1,6 +1,9 @@
 import { client, urlFor } from "@/lib/sanity";
 import Image from "next/image";
 
+export const revalidate = 20;
+
+
 async function getData() {
   const query = `
   *[_type == 'hero'] {
