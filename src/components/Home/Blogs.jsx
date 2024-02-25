@@ -1,5 +1,6 @@
 import { client, urlFor } from "@/lib/sanity";
 import Image from "next/image";
+import Link from "next/link";
 
 async function getBlogs() {
   const query = `
@@ -7,22 +8,17 @@ async function getBlogs() {
     title,
       body,
       description,
-      main_image{
-      asset{
-        _ref
-      }
-      }
+      "currentSlug": slug.current,
+      "imageUrl": main_image.asset._ref,
   }
-  `
-  const data = await client.fetch(query)
+  `;
+  const data = await client.fetch(query);
 
-  return data
-  ;
+  return data;
 }
 
 export default async function Blogs() {
   const blogs = await getBlogs();
-  console.log(blogs)
   return (
     <section>
       <div className="container mx-auto ">
@@ -39,56 +35,27 @@ export default async function Blogs() {
 
             <div className="col-span-5 col-start-1 row-span-2 row-start-2 2xl:translate-x-24 ">
               <div className="flex flex-col items-center w-full gap-5 lg:gap-24 xl:flex-row ">
-                {/* <figure className=" w-[20rem] lg:min-w-[370px] grid-rows-6 grid h-[448px]  relative">
-                  <img
-                    src="/chair2.svg"
-                    alt=""
-                    className="object-cover h-full row-span-5 row-start-1 "
-                  />
-                  <figcaption className="absolute p-3.5 text-2xl text-center text-white bg-dark font-playfair bottom-5 w-[90%] right-5 ">
-                    <p>Emu facilisi posuere ut at cras non ipsum proin</p>
-                  </figcaption>
-                </figure>
-                <figure className=" w-[20rem] lg:min-w-[370px] grid-rows-6 grid h-[448px]  relative">
-                  <img
-                    src="/chair2.svg"
-                    alt=""
-                    className="object-cover h-full row-span-5 row-start-1 "
-                  />
-                  <figcaption className="absolute p-3.5 text-2xl text-center text-white bg-dark font-playfair bottom-5 w-[90%] right-5 ">
-                    <p>Emu facilisi posuere ut at cras non ipsum proin</p>
-                  </figcaption>
-                </figure>
-                <figure className=" w-[20rem] lg:min-w-[370px] grid-rows-6 grid h-[448px]  relative">
-                  <img
-                    src="/chair2.svg"
-                    alt=""
-                    className="object-cover h-full row-span-5 row-start-1 "
-                  />
-                  <figcaption className="absolute p-3.5 text-2xl text-center text-white bg-dark font-playfair bottom-5 w-[90%] right-5 ">
-                    <p>Emu facilisi posuere ut at cras non ipsum proin</p>
-                  </figcaption>
-                </figure> */}
-
-                {
-                  blogs.map((blog) => (
-            <>
-
-            <figure className=" w-[20rem] lg:min-w-[370px] grid-rows-6 grid h-[448px]  relative"> 
-                      <Image 
-                        src={urlFor(blog.main_image.asset._ref).url()}
-                        fill='true'
+                {blogs.map((blog) => (
+                  <Link key={blog.title} href={`/blog/${blog.currentSlug}`}>
+                    <figure
+                      className=" w-[20rem] lg:min-w-[370px] grid-rows-6 grid h-[448px]  relative"
+                      key={blog.title}
+                    >
+                      <Image
+                        src={urlFor(blog.imageUrl).url()}
+                        fill="true"
                         alt=""
                         className="object-cover h-full row-span-5 row-start-1 "
+                        placeholder="blur"
+                        blurDataURL={urlFor(blog.imageUrl).url()}
+                        key={blog.title}
                       />
-                      <figcaption className="absolute p-3.5 text-2xl text-center text-white bg-dark font-playfair bottom-5 w-[90%] right-5 ">
+                      <figcaption className="absolute p-3.5 text-2xl text-center text-white bg-dark font-playfair bottom-8 w-[90%] right-5 ">
                         <p>{blog.title}</p>
                       </figcaption>
                     </figure>
-            </>
-
-                  ))
-                }
+                  </Link>
+                ))}
               </div>
             </div>
           </div>
